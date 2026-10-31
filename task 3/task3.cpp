@@ -1,6 +1,7 @@
 #include <iostream>
 int tonum(char* ptr);
 int main(int argc, char* argv[]){
+    if (argc != 2) return 1;
     int n = tonum(argv[1]);
     double* mas1 = new double[n];
     double* mas2 = new double[n];
@@ -14,6 +15,7 @@ int main(int argc, char* argv[]){
     for (int i = 0; i < n; i++){
         sum += mas1[i] * mas2[i];
     }
+    std::cout.precision(15);
     std::cout << sum << std::endl;
     delete[] mas1;
     delete[] mas2;

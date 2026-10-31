@@ -2,6 +2,7 @@
 int tonum(char* ptr);
 int Evklid(int num1, int num2);
 int main(int argc, char* argv[]){
+    if (argc != 2) return 1;
     int n = tonum(argv[1]);
     int* arr = new int[n]; 
     for (int i = 0; i < n; i++){
